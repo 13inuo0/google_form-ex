@@ -68,11 +68,11 @@ nav {
   opacity: 0;
   visibility: hidden;
 }
-.navicon-a:hover::before{
-    /* 투명도로 호버설정하면 아이콘 위에 커서를 두지 않아도 인식이 되기 떄문에 디스플레이로 설정. */
-/* display: block; */
-opacity: 1;
-visibility: visible;
+.navicon-a:hover::before {
+  /* 투명도로 호버설정하면 아이콘 위에 커서를 두지 않아도 인식이 되기 떄문에 디스플레이로 설정. */
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
 }
 .navi-text {
   color: rgba(0, 0, 0, 0.87);
@@ -101,13 +101,13 @@ button a {
 }
 /* 검색창 */
 .input-wrap {
-    display: flex;
+  display: flex;
   justify-content: center;
   width: 100%;
   /* background-color: antiquewhite; */
 }
 .input {
-    display: flex;
+  display: flex;
   width: 746px;
   height: 48px;
   border-radius: 40px;
@@ -121,42 +121,113 @@ button a {
   max-width: 746px;
   min-width: 337px;
 }
-.input li:nth-child(2){
-width: 60%;
-background-color: aliceblue;
+.input li:nth-child(2) {
+  width: 60%;
+  background-color: aliceblue;
 }
-.input input{
-    display: block;
-    width: 100%;
-    padding: 5px;
-    border: 0;
-    outline: none;
-    /* background-color: #0077ff; */
+.input input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 0;
+  outline: none;
+  /* background-color: #0077ff; */
 }
 .icon {
-    display: flex;
-    width: 8%;
-    justify-content: space-evenly;
+  display: flex;
+  width: 8%;
+  justify-content: space-evenly;
 }
-.icon a{
-    height: 20px;
+.icon a {
+  height: 20px;
 }
-.input img{
-    width: 20px;
-    height: 20px;
-    align-items: center;
+.input img {
+  width: 20px;
+  height: 20px;
+  align-items: center;
 }
-i{
-    width: 100%;
-    opacity: 0.5;
+i {
+  width: 100%;
+  opacity: 0.5;
 }
 /* 바로가기 목록 */
-.enter-list{
-    width: 112px;
-    height: 112px;
-    background-color: #888;
+.search-plus {
+  display: flex;
+  position: relative;
+  width: 60%;
+  max-width: 600px;
+  min-width: 200px;
+  justify-content: center;
+  padding: 30px;
+  /* background-color: #888; */
 }
-.enter-list a{
-    width: 112px;
-    height: 112px;
+.search-plus ul {
+  display: flex;
+}
+
+.search-plus ul li {
+  width: calc(100 / 3);
+  max-width: 110px;
+  position: relative;
+  /* background-color: #499eff; */
+}
+.search-plus ul li a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.search-plus ul li a span {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 80px;
+}
+.bg {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.bg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 호버했을 때 나오는 배경 */
+.hover_bg {
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.hover_bg img{
+  position: absolute;
+  top: 10px;
+  right: 0;
+  opacity: 0;
+}
+/* 호버 했을 때 */
+.search-plus ul li:hover .hover_bg{
+  opacity: 1;
+}
+.search-plus ul li:hover .hover_bg img{
+  opacity: 1;
+  transition: all 1s;
+  transition-delay: 0.3s;
 }
