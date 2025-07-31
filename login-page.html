@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login page</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <!-- 로그인 페이지 입니다. -->
-</body>
+    <div class="container">
+      <!-- 회원가입 -->
+      <h2>회원가입</h2>
+      <form>
+        <div class="input-group">
+          <!-- 입력창 -->
+          <label for="userName"><i class="fa-solid fa-user"></i></label>
+          <input type="text" id="userName" placeholder="이름을 입력하세요" />
+        </div>
+        <div class="input-group">
+          <label for="user_E-mail"><i class="fa-solid fa-envelope"></i></label>
+          <input
+            type="text"
+            id="user_E-mail"
+            placeholder="이메일을 입력하세요"
+          />
+        </div>
+        <div class="input-group">
+          <label for="user_Password"><i class="fa-solid fa-lock"></i></label>
+          <input
+            type="text"
+            id="user_Password"
+            placeholder="비밀번호를 입력하세요"
+          />
+        </div>
+        <div class="input-group">
+          <label for="user_password-confirm"
+            ><i class="fa-solid fa-lock"></i
+          ></label>
+          <input
+            type="text"
+            id="user_password-confirm"
+            placeholder="비밀번호 확인"
+          />
+        </div>
+
+        <!-- 가입하기 버튼 -->
+        <button type="submit" >가입하기</button>
+        <button type="button">공지사항</button>
+      </form>
+    </div>
+  </body>
 </html>
