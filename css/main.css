@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  height: 1500px;
+}
 ul,
 li {
   list-style: none;
@@ -14,6 +17,10 @@ a {
 }
 /* 전체 레이아웃 */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   /* background-color: aqua; */
   justify-content: flex-end;
@@ -21,6 +28,7 @@ nav {
   gap: 20px;
   padding: 20px;
   margin-bottom: 100px;
+  z-index: 99;
 }
 .navicon {
   display: flex;
@@ -78,7 +86,7 @@ nav {
   color: rgba(0, 0, 0, 0.87);
   font-size: 14px;
 }
-button {
+.navicon button {
   background-color: #0077ff;
   border: none;
   border-radius: 3px;
@@ -86,11 +94,11 @@ button {
   max-width: 100px;
   min-width: 60px;
 }
-button:hover {
+.navicon button:hover {
   background-color: #499eff;
   cursor: pointer;
 }
-button a {
+.navicon button a {
   color: aliceblue;
 }
 /* 로고 */
@@ -203,6 +211,7 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 171px;
 }
 /* 호버했을 때 나오는 배경 */
 .hover_bg {
@@ -230,4 +239,25 @@ i {
   opacity: 1;
   transition: all 1s;
   transition-delay: 0.3s;
+}
+/* 검색 버튼 */
+.search-btn{
+  width: 50%;
+  /* background-color: #48ff00; */
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+  white-space: nowrap;
+}
+.search-btn button{
+  padding: 5px 15px;
+  background-color: #f4f4f4;
+  border-style: none;
+}
+.search-btn button:hover{
+color: #333;
+background:linear-gradient(to bottom,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+cursor: pointer;
 }
